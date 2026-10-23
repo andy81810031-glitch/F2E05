@@ -1,0 +1,12 @@
+.submit-btn {
+    display: block;
+}
+.pointer {
+    cursor: pointer;
+}
+.loading {
+    cursor:progress
+}
+textarea {
+    resize: none;
+}

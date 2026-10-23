@@ -1,0 +1,80 @@
+ul li {
+  /* background-color: pink; */
+}
+ul > li li {
+  background-color: aqua;
+}
+a {
+  text-decoration: none;
+  color: red;
+}
+.mobile-pay {
+  display: inline-block;
+}
+/* nav直接的下一層是a標籤才會被選到，下下層不會 */
+nav > a {
+  color: blue;
+}  
+nav > div > a {
+  color: green;
+}
+/* 選到h2的鄰居p */
+h2 + p {
+  background-color: chocolate;
+}
+p + p {
+  background-color: coral;
+}
+
+/* 跟h2同層的p都會被選到 */
+h2 ~ p {
+  font-size: 30px;
+}
+/* 標籤[屬性] */
+input[disabled] {
+  border: 3px solid blue;
+}
+label[for="name"] {
+  font-size: 24px;
+  color: orange;
+}
+textarea[name="message"] {
+  padding: 10px;
+  border: 1px solid gray;
+}
+form {
+  /* 修改主色 */
+  /* accent-color: orange; */
+}
+nav {
+  text-align: right;
+}
+a {
+  text-decoration: none;
+}
+/* 點擊前 */
+a:link {
+  color: black;
+}
+/* 點擊後 */
+a:visited {
+  color: lightgray;
+}
+/* 滑鼠停在上面的時候 */
+a[href="#home"]:hover {
+  background-color: aquamarine;
+}
+/* 被點擊的瞬間 */
+button[type="submit"]:active {
+  background-color: white;
+  border: 2px solid red;
+}
+/* 被聚焦的時候 */
+input[name="name"]:focus {
+  background-color: aqua;
+  font-size: 20px;
+}
+/* 被勾選的選項 */
+input:checked {
+  accent-color:orange ;
+}

@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+li {
+  display: inline;
+  
+}
+.poetry-red {
+  color: red;
+}
+a {
+  /* text-decoration: underline double; */
+  text-decoration: none;
+  color: black;
+}
+
+hr {
+  border-color: blue;
+  border-style: solid;
+}
+
+.pink-mark {
+  background-color: pink;
+}

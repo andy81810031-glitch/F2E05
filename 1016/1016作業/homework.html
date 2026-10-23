@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="homework.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <!-- Logo -->
+      <button class="menu-btn" type="button">
+        <i class="iconoir-menu"></i>
+      </button>
+      <a href="#" class="logo">
+        <img 
+        class="logo-img" 
+        src="https://www.tigerairtw.com/assets/zh-TW-DYtL0a4x.svg" 
+        alt="logo" 
+        width="70px" 
+        height="30px"
+        >
+      </a>
+
+      <!-- 左邊選單 -->
+        <ul class="nav-left">
+          <li><a href="#">準備出發</a></li>
+          <li><a href="#">歡迎登機</a></li>
+          <li><a href="#">虎迷優惠</a></li>
+          <li><a href="#">虎迷須知</a></li>
+        </ul>
+
+        <!-- 右邊選單 -->
+        <ul class="nav-right">
+          <li><i class="iconoir-search"></i><a href="#">航班搜尋</a></li>
+          <li><i class="iconoir-user"></i><a href="#">登入/註冊</a></li>
+          <li><i class="iconoir-time-zone"></i><a href="#">繁中</a></li>
+          <li><i class="iconoir-dollar-circle"></i><a href="#">TWD</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- 橫幅 -->
+  <section>
+    <img class="banner" src="https://strapi-assets.tigerairtw.com/D2880x600_a50c725126.png" alt="banner">
+  </section>
+
+  <main>
+    <!-- 中間區塊 -->
+    <section class="main-content">
+      
+      <!-- 上方 -->
+      <div class="flights">
+        <ul>
+          <li><i class="iconoir-airplane"></i><a href="#">航班</a></li>
+          <li><i class="iconoir-mastercard-card"></i><a href="#">樂虎卡</a></li>
+          <li><i class="iconoir-emoji-puzzled"></i><a href="#">虎加酒</a></li>
+          <li><i class="iconoir-emoji-sing-right-note"></i><a href="#">虎里轉</a></li>
+        </ul>
+      </div>
+
+      <!-- 中間表單 -->
+      <form class="form" action="">
+        <!-- 行程類型 -->
+        <div class="trip-type">
+          <label for="trip-type">來回</label>
+          <select id="trip-type" name="trip-type">
+            <option value="round-trip">來回</option>
+            <option value="one-way">單程</option>
+            <option value="multi-city">不同點</option>
+          </select>
+        </div>
+        <!-- 出發地 -->
+        <div class="location">
+          <div>
+            <label for="departure">出發地</label>
+            <input 
+              type="text"
+              id="departure"
+              name="departure"
+              placeholder="出發地"
+            >
+          </div>
+          <!-- 目的地 -->
+          <div>
+            <label for="destination">目的地</label>
+            <input 
+              type="text"
+              id="destination"
+              name="destination"
+              placeholder="目的地"
+            >
+          </div>
+        </div>
+        <!-- 日期 -->
+        <div class="date">
+          <!-- 去程 -->
+          <div class="date-group">
+            <label for="departure-date">去程出發日期</label>
+            <input 
+              type="date"
+              id="departure-date"
+              name="departure-date"
+            >
+          </div>
+          <!-- 回程 -->
+          <div class="date-group">
+            <label for="return-date">回程出發日期</label>
+            <input 
+              type="date"
+              id="return-date"
+              name="return-date"
+            >
+          </div>
+        </div>
+        <!-- 旅客人數 --> 
+        <div class="passengers">
+          <label for="passengers">旅客人數</label>
+          <select id="passengers" name="passengers">
+            <option value="1">1 成人</option>
+            <option value="2">2 成人</option>
+            <option value="3">3 成人</option>
+            <option value="4">4 成人</option>
+          </select>
+        </div>
+        <!-- 下方 -->
+        <div class="form-bottom">
+          <label for="promo">
+            <input 
+              type="checkbox"
+              id="promo"
+              name="promo"
+              value="yes"
+            >
+            加入促銷代碼
+          </label>
+          <button class="search-btn">
+            搜尋
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 快捷功能 -->
+    <section class="quick-links">
+      <a href="#">
+        <img src="https://strapi-assets.tigerairtw.com/icon_27d4c597ad.png" alt="manage-orders">
+        <span class="quick-icon"></span>
+        <span>管理訂單</span>
+      </a>
+
+      <a href="#">
+        <img src="https://strapi-assets.tigerairtw.com/icon_1_4f7736ec26.png" alt="self-check-in">
+        <span class="quick-icon"></span>
+        <span>自助報到</span>
+      </a>
+
+      <a href="#">
+        <img src="https://strapi-assets.tigerairtw.com/icon_2_e04440f654.png" alt="flight-status">
+        <span class="quick-icon"></span>
+        <span>航班動態</span>
+      </a>
+
+      <a href="#">
+        <img src="https://strapi-assets.tigerairtw.com/icon_3_d2b4b08936.png" alt="duty-free-shopping">
+        <span class="quick-icon"></span>
+        <span>免稅品購買</span>
+      </a>
+
+      <a href="#">
+        <img src="https://strapi-assets.tigerairtw.com/icon_4_7401c8ef83.png" alt="faq">
+        <span class="quick-icon"></span>
+        <span>常見問題</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

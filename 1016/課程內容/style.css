@@ -1,0 +1,64 @@
+/* picture {
+  display: block;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (min-width: 768px) {
+  div {
+    width: 500px;
+    padding: 20px;
+  }
+  p {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  div {
+    width: 800px;
+    padding: 30px;
+  }
+  p {
+    font-size: 26px;
+  }
+} */
+
+@media screen and (min-width: 768px) {
+  /* 只針對螢幕裝置做調整 */
+}
+@media print {
+  /* 只針對列印模式做調整 */
+  header {
+    display: none;
+  }
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: 240px 1fr;
+  }
+  nav {
+    display: block;
+    background-color: gray;
+    color: blueviolet;
+  }
+}

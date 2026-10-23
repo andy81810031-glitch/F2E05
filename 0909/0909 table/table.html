@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    td,th {
+      border-width: 2px;
+      border-style: solid;
+      border-color: black;
+      /* border: 2px solid black; */
+    }
+    /*
+    th {
+      border-top-color: blue;
+    }
+    td {
+      border-right-style:dotted;
+    }
+    */
+    caption {
+      caption-side: top;
+    }
+    table {
+      border-collapse: collapse;
+      /*border-collapse: separate;*/
+      /*border-spacing: 10px;*/ 
+      text-align: center;
+    }
+    p {
+      /* 上下 左右 */
+      border-width: 10px 10px;
+      /* 上 左右 下 */
+      border-style: solid dotted double;
+      /* 上 右 下 左 左 */
+      border-color: purple red blue orange;
+    }
+  </style>
+</head>
+  <body>
+  <p>測試</p>
+    <table>
+    <caption>
+      每週課表
+    </caption>
+    <colgroup>
+      <col />
+      <col span="2" style="background-color: pink;">
+      <col />
+      <col span="2" style="background-color: yellow;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>節次/星期</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+    </thead>  
+    <tbody>
+      <tr>
+        <td>0800-0805</td>
+        <td>國文</td>
+        <td>數學</td>
+        <td>英文</td>
+        <td>物理</td>
+        <td>歷史</td>
+      </tr>
+      <tr>
+        <td>0900-0950</td>
+        <td>數學</td>
+        <td>英文</td>
+        <td>國文</td>
+        <td>化學</td>
+        <td>地理</td>
+      </tr>
+      <tr>
+        <td>1000-1050</td>
+        <td>英文</td>
+        <td>國文</td>
+        <td>數學</td>
+        <td>生物</td>
+        <td>公民</td>
+      </tr>
+      <tr>
+        <td colspan="6">午休</td>
+      </tr>
+      <tr>
+        <td>1300-1350</td>
+        <td>英文</td>
+        <td>國文</td>
+        <td>數學</td>
+        <td>生物</td>
+        <td rowspan="3">公民</td>
+      </tr>
+      <tr>
+        <td>1400-1450</td>
+        <td>英文</td>
+        <td>國文</td>
+        <td>數學</td>
+        <td>生物</td>
+        <!-- <td>公民</td> -->
+      </tr>
+      <tr>
+        <td>1500-1550</td>
+        <td>英文</td>
+        <td>國文</td>
+        <td>數學</td>
+        <td>生物</td>
+        <!-- <td>公民</td> -->
+      </tr>
+    </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="6">備註：如有課程異動，請以最新公告為準</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+img {
+  display: block;
+  background-color: gray;
+}
+figure {
+  border: 10px solid gray;
+  width: 500px;
+}
+figcaption {
+  font-size: 30px;
+  text-align: center;
+}
+/* 幫字幕換顏色 */
+video::cue {
+  color: blue;
+}

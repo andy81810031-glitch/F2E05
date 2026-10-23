@@ -1,0 +1,142 @@
+.box {
+  display: flex;
+  width: 500px;
+  height: 50px;
+  border: 2px solid black;
+}
+.box p {
+  width: 20px;
+  /* 20*5=100px */
+  /* 500-100=400 */
+}
+.box :nth-child(1) {
+  background-color: orange;
+  flex-grow: 1;
+}
+.box :nth-child(2) {
+  background-color: orangered;
+  flex-grow: 2;
+}
+.box :nth-child(3) {
+  background-color: yellowgreen;
+  flex-grow: 1;
+}
+.box :nth-child(4) {
+  background-color: rgb(85, 85, 236);
+  flex-grow: 3;
+}
+.box :nth-child(5) {
+  background-color: rgb(174, 147, 96);
+  flex-grow: 1;
+}
+.box-two {
+  display: flex;
+  width: 400px;
+}
+.box-two p {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+}
+.box-two :nth-child(1) {
+  background-color: orange;
+  flex-shrink: 0;
+}
+.box-two :nth-child(2) {
+  background-color: orangered;
+  flex-shrink: 0;
+}
+.box-two :nth-child(3) {
+  background-color: yellowgreen;
+  flex-shrink: 0;
+}
+.box-two :nth-child(4) {
+  background-color: rgb(85, 85, 236);
+  flex-shrink: 0;
+}
+.box-two :nth-child(5) {
+  background-color: rgb(174, 147, 96);
+  flex-shrink: 0;
+}
+.box-three {
+  display: flex;
+  /* flex-direction: row; */
+  width: 600px;
+}
+
+.box-three :nth-child(1) {
+  background-color: chocolate;
+  flex-basis: 50px;
+  /* 優先權大於width,height */
+}
+.box-three p {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  flex-grow: 1;
+}
+.box-three :nth-child(2) {
+  background-color: orange;
+  flex-basis: 100px;
+}
+.box-three :nth-child(3) {
+  background-color: yellow;
+  flex-basis: 150px;
+}
+.number-list {
+  display: flex;
+}
+.number-list li {
+  width: 100px;
+  height: 100px;
+}
+.number-list :nth-child(odd) {
+  background-color: palevioletred;
+  order: 3;
+}
+.number-list :nth-child(even) {
+  background-color: orange;
+  order: 1;
+}
+.number-list :nth-child(3) {
+  background-color: rgb(104, 192, 70);
+  order: 4;
+}
+.number-list :nth-child(4) {
+  background-color: rgb(94, 188, 235);
+  order: 2;
+}
+.number-list :nth-child(5) {
+  background-color: rgb(175, 115, 152);
+  /* 預設值 */
+  order: 0;
+}
+.fruit {
+  display: flex;
+  width: 500px;
+  height: 200px;
+  background-color: bisque;
+  justify-content: center;
+  align-items: center;
+}
+.fruit li {
+  width: 50px;
+  height: 50px;
+}
+.fruit :nth-child(1) {
+  background-color: palevioletred;
+  align-self: flex-start;
+}
+.fruit :nth-child(2) {
+  background-color: orange;
+}
+.fruit :nth-child(3) {
+  background-color: rgb(104, 192, 70);
+  align-self: flex-end;
+}
+.fruit :nth-child(4) {
+  background-color: rgb(94, 188, 235);
+}
+.fruit :nth-child(5) {
+  background-color: rgb(175, 115, 152);
+}

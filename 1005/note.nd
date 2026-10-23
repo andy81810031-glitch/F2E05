@@ -1,0 +1,23 @@
+今日內容
+fetch
+then..catch vs async / await
+動態生成 DOM
+createElement
+appendChild
+insertAdjacentHTML
+setTimeout
+
+
+
+
+
+自己網站 ----> 外部資料 (API)
+
+
+SSOT = Single Source of Truth
+單一真相來源
+
+Stack：First In, Last Out (FILO)
+Queue：Last In, First Out
+
+

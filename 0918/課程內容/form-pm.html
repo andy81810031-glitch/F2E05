@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="../../reset.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <p>五倍飲料店</p>
+        <input type="radio" name="drink" id="green-tea" value="green-tea" />
+        <label for="green-tea">阿里山清查</label>
+        <input
+          type="radio"
+          name="drink"
+          id="black-tea"
+          value="black-tea"
+          checked
+        />
+        <label for="black-tea">日月潭紅茶</label>
+        <input type="radio" name="drink" id="milk-tea" value="milk-tea" />
+        <label for="milk-tea">阿薩姆奶茶</label>
+      </div>
+      <div>
+        <p>加料</p>
+        <input
+          type="checkbox"
+          id="bubble"
+          name="toppings"
+          value="bubble"
+          checked
+        />
+        <label for="bubble">珍珠</label>
+        <input type="checkbox" id="pudding" name="toppings" value="pudding" />
+        <label for="pudding">布丁</label>
+        <input
+          type="checkbox"
+          id="tea-jelly"
+          name="toppings"
+          value="tea-jelly"
+        />
+        <label for="tea-jelly">茶凍</label>
+        <input
+          type="checkbox"
+          id="coconut-jelly"
+          name="toppings"
+          value="coconut-jelly"
+        />
+        <label for="coconut-jelly">椰果</label>
+      </div>
+      <input type="submit" value="提交" />
+    </form>
+
+
+
+
+
+    <!-- <form oninput="x.value = parseInt(a.value) + parseInt(b.value)">
+      <input type="range" name="a" value="50" />
+      +<input type="number" name="b" value="25" /> =<output
+        name="x"
+        for="a b"
+      ></output>
+    </form> -->
+
+
+    
+    <form action="">
+      <div>
+        <label for="fruit">水果</label>
+        <input type="text" id="fruit" list="fruit-list" />
+        <datalist id="fruit-list">
+          <option value="mango"></option>
+          <option value="banana"></option>
+          <option value="apple"></option>
+        </datalist>
+      </div>
+      <div>
+        <label for="time">預約時間</label>
+        <input type="time" id="time" list="time-list" />
+        <datalist id="time-list">
+          <option value="10:00"></option>
+          <option value="11:00"></option>
+          <option value="13:00"></option>
+        </datalist>
+      </div>
+      <div>
+        <label for="color">選顏色</label>
+        <input type="color" id="color" list="color-list" />
+        <datalist id="color-list">
+          <option value="#FFE8AA"></option>
+          <option value="#D4806A"></option>
+          <option value="#551200"></option>
+        </datalist>
+      </div>
+      <br />
+      <!-- 預設max是1 -->
+      <!-- <progress></progress> -->
+      <progress value="0.5"></progress>
+      <progress max="100" value="10"></progress>
+
+      <fieldset>
+        <legend>個人資料</legend>
+        <label for="name">姓名：</label>
+        <input type="text" id="name" />
+        <label for="tel">電話：</label>
+        <input type="tel" id="tel" />
+      </fieldset>
+      <fieldset>
+        <legend>登入資訊</legend>
+        <label for="acc">帳號：</label>
+        <input type="text" id="acc" name="acc" />
+        <label for="password">密碼：</label>
+        <input type="password" id="password" name="password" />
+      </fieldset>
+
+      <hr />
+      <label for="country">國家</label>
+      <select name="country" id="country">
+        <option value="">請選擇</option>
+        <optgroup label="亞洲">
+          <option value="taiwan">台灣</option>
+          <option value="japan" selected>日本</option>
+          <option value="korea">韓國</option>
+        </optgroup>
+        <optgroup label="歐洲">
+          <option value="germany">德國</option>
+          <option value="uk">英國</option>
+          <option value="italy">義大利</option>
+        </optgroup>
+        <optgroup label="其他">
+          <option value="usa">美國</option>
+        </optgroup>
+      </select>
+      <hr />
+      <label for="date">日期：</label>
+      <input type="date" id="date" name="date" />
+
+      <label for="time">時間：</label>
+      <input type="time" id="time" name="time" />
+
+      <label for="credit-card">信用卡到期日：</label>
+      <input type="month" id="credit-card" name="month" />
+
+      <label for="report">報表週次：</label>
+      <input type="week" id="report" name="week" value="2026-W30" />
+
+      <label for="appointment">預約時間</label>
+      <input
+        type="datetime-local"
+        id="appointment"
+        min="2026-09-18T00:00"
+        max="2026-12-31T00:00"
+        name="datetime-local"
+      />
+
+      <label for="theme-color">主題顏色</label>
+      <input type="color" id="theme-color" name="theme-color" />
+      <label for="volume">音量</label>
+      <input type="range" id="volume" name="volume" min="0" max="60" />
+      <label for="wesite">個人網站：</label>
+      <input
+        type="url"
+        id="website"
+        name="website"
+        placeholder="https://example.com"
+      />
+      <label for="avatar">大頭照</label>
+      <!-- .jpg .doc audio/* video/* -->
+      <input type="file" accept="image/*" multiple />
+      <label for="message">留言給我們</label>
+      <textarea
+        name="message"
+        id="message"
+        rows="10"
+        cols="20"
+        spellcheck="false"
+      >
+預設值打在這</textarea
+      >
+
+      <!-- <input type="submit" value="提交" /> -->
+      <button type="submit" class="pointer">提交</button>
+      <button type="button" class="loading">一般按鈕</button>
+      <button type="reset">重置</button>
+      <a href="#">連結</a>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+/* li::before {
+  content: "<<";
+  color: green;
+}
+li::after {
+  content: ">>";
+  color: red;
+} */
+
+li::before {
+  content: "" ;
+  background-image: url(/public/pumpkin.jpeg);
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+/* 寫法一 */
+#agree:checked + label::after {
+  content: "已同意";
+  color: blue;
+  font-size: 10px;
+}
+/* 寫法二 */
+form:has(#agree:checked)::after {
+  content: "已同意";
+  color: blue;
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.cart::after {
+  content: attr(product-count) ;
+  background-color: red;
+  color: white;
+  border-radius: 999px;
+  padding: 0 4px;
+  font-size: 12px;
+}
+details {
+  width: 500px;
+  margin-bottom: 12px;
+}
+details summary {
+  color: #4a2414;
+  font-weight: bold;
+  margin-bottom: 12px;
+  list-style-type: none;
+}
+/* details[open] summary {
+  list-style-type: "- ";
+} */
+details summary::before {
+  content: "+";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff3e7;
+  border-radius: 999px;
+  text-align: center;
+  margin-right: 8px;
+  /* font-weight: bold; */
+}
+details[open] summary::before {
+  content: "- ";
+}
+details p {
+  color: #6b4632;
+  line-height: 1.5;
+  margin-left: 1rem;
+}
+.float-area div {
+  width: 100px;
+  height: 100px;
+  background-color: cadetblue;
+  display: inline-block;
+  font-size: 16px;
+}
+.float-area :nth-child(1) {
+  float: right;
+}
+.float-area :nth-child(2) {
+  background-color: rgb(151, 94, 94);
+  float: right;
+}
+.float-area :nth-child(3) {
+  float: left;
+  background-color: coral;
+}
+/* 方法一 */
+.clearfix {
+  clear: both;
+}
+/* 方法二 */
+.float-area::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.float-area {
+  font-size: 0;
+  border: 1px solid black;
+  /* 方法三 */
+  display: flow-root;
+}
+article {
+  width: 500px;
+}
+article img {
+  width: 200px;
+  float: right;
+  margin: 0 8px 8px 0;
+}
+article p:nth-of-type(2) {
+  clear: right;
+}

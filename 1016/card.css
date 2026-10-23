@@ -1,0 +1,97 @@
+body {
+  margin: 24px;
+}
+.card {
+  display: grid;
+  grid-template-areas: 
+  "title"
+  "img"
+  "price"
+  "btn"
+  "desc";
+  max-width: 900px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  gap: 12px;
+}
+.title {
+  grid-area: title;
+  font-size: 20px;
+  font-weight: bold;
+}
+.img {
+  grid-area: img;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+}
+.price {
+  grid-area: price;
+  font-size: 22px;
+  font-weight: bold;
+  color: crimson;
+}
+.desc {
+  grid-area: desc;
+  color: gray;
+  line-height: 1.6;
+}
+button {
+  grid-area: btn;
+  padding: 12px;
+  border: none;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+@media (min-width:1024px) {
+  .card {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "img title"
+    "img price"
+    "img desc"    
+    "img btn";
+  }
+}
+h1 {
+  /* font-size: 30px; */
+  font-size: clamp(30px, 5vw, 50px);
+  /* n*0.05=30 n=600 */
+  /* n*0.05=50 n=1000 */
+}
+/* @media (min-width:1024px) {
+  h1 {
+    font-size: 50px;
+  }
+} */
+.clamp-area {
+  width: clamp(320px, 90%, 1000px);
+  padding: clamp(10px, 4vw, 60px);
+  background-color: khaki;
+  width: calc(100% - 200px);
+  padding: calc(20px * 2);
+  margin: calc(500px / 4);
+}
+.header {
+  height: 50px;
+  background-color: darkgray;
+}
+.main {
+  height: calc(100vh - 50px);
+  background-color: coral;
+  display: flex;
+}
+.aside {
+  width: 200px;
+}
+.section {
+  width: calc(100vw - 200px);
+  background-color: burlywood;
+}

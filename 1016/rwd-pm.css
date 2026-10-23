@@ -1,0 +1,49 @@
+body {
+  padding: 16px;
+}
+.page {
+  display: grid;
+  grid-template-areas:
+  "header"
+  "nav"
+  "main"
+  "aside"
+  "footer" ;
+  gap: 8px;
+}
+header {
+  grid-area: header;
+  background-color: red;
+}
+nav {
+  grid-area: nav;
+  background-color: orange;
+}
+main {
+  grid-area: main;
+  background: linear-gradient(to right, #FFD700, #8A2BE2);
+}
+footer {
+  grid-area: footer;
+  background-color: green;
+}
+aside {
+  grid-area: aside;
+  background-color: navy;
+}
+.page > * {
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .page {
+    grid-template-columns: 180px 1fr 200px;
+    grid-template-rows: auto 300px auto; 
+    grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  }
+}

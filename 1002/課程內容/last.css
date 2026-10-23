@@ -1,0 +1,59 @@
+body {
+  padding-top: 20px;
+}
+.container {
+  width: 0;
+  height: 0;
+  /* border: 20px solid black ; */
+  border-style: solid;
+  border-width: 50px;
+  margin-top: 10px;
+}
+.container.one {
+  border-color:red yellow green blue ;
+}
+.container.two {
+  border-color: red transparent transparent;
+}
+.circle {
+  margin-left: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: cadetblue;
+}
+.circle.first {
+  border-radius: 20px 10px 50px 3px ;
+}
+.circle.second {
+  /* 左上右下 右上左下 */
+  /* border-radius: 20px 10px ; */
+  border-radius: 50%;
+  /* border-radius: 100px; 長寬的一半 */
+}
+.circle.third {
+  /* border-radius: 0px 100px 100px 0; */
+  width: 300px;
+  border-radius: 999px;
+}
+input[name="name"] {
+  border: 2px solid gray;
+}
+input[name="name"]:focus {
+  outline: 3px solid red;
+  border: none;
+}
+input[name="tel"]:focus {
+  outline: 3px dotted orange;
+  /* 外框跟邊框拉開距離 */
+  outline-offset: 10px ;
+}
+.pie {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    rgb(219, 219, 74) 0% 10%,
+    rgb(232, 161, 30) 10% 30%,
+    #b42c2c 30% 100%
+  );
+}

@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.btn {
+  transform: translate(100px, -100px) rotate(45deg)
+}

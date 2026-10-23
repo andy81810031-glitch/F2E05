@@ -1,0 +1,202 @@
+section div {
+  width: 100px;
+  height: 100px;
+}
+section {
+  width: 400px;
+  height: 400px;
+  border: 5px solid saddlebrown;
+  position: relative;
+}
+section div:not(.cube, .front):nth-of-type(1) {
+  border: 1px solid black;
+}
+section div:nth-of-type(2) {
+  background-color: salmon;
+}
+section div:nth-of-type(3) {
+  background-color: rgb(56, 130, 56);
+}
+section div:nth-of-type(4) {
+  background-color: rgb(92, 164, 251);
+}
+.translate div {
+  position: absolute;
+  left: 150px;
+  top: 150px;
+}
+.translate div:nth-of-type(2) {
+  transform: translate(-100px, -50px);
+}
+.translate div:nth-of-type(3) {
+  transform: translateX(150px) translateY(150px);
+}
+.translate div:nth-of-type(4) {
+  transform: translateY(-200px);
+}
+.scale div:nth-of-type(2) {
+  transform: translateX(150px) scale(1.5);
+}
+.scale div:nth-of-type(3) {
+  transform: scaleY(1.5);
+}
+.scale div:nth-of-type(4) {
+  transform: translateX(150px) scale(1.5, 0.5);
+}
+.rotate div:nth-of-type(2) {
+  transform: translateX(150px) rotate(45deg);
+}
+.rotate div:nth-of-type(3) {
+  transform: translateX(200px) translateY(50px) rotateX(0.5turn);
+}
+.rotate div:nth-of-type(4) {
+  transform: translateX(50px) rotateY(180deg); 
+}
+.skew div {
+  position: absolute;
+  left: 50px;
+}
+.skew div:nth-of-type(2) {
+  transform: skewX(45deg);
+}
+.skew div:nth-of-type(3) {
+  transform: translate(150px, 150px);
+}
+.skew div:nth-of-type(4) {
+  transform: translate(150px, 150px) skewY(45deg);
+}
+.mix div {
+  position: absolute;
+}
+.mix div:nth-of-type(2) {
+  transform: translateX(100px) rotate(90deg);
+}
+.mix div:nth-of-type(3) {
+  transform: translateX(100px);
+  /* 下面蓋過上面的，最終只有旋轉90度 */
+  transform: rotate(90deg);
+}
+.origin div:nth-of-type(2) {
+  position: absolute;
+  left: 150px;
+}
+.origin div:nth-of-type(2):hover {
+  transform: rotate(45deg);
+  transform-origin: left top;
+}
+.origin div:nth-of-type(3) {
+  position: absolute;
+  left: 150px;
+  top: 250px;
+}
+.origin div:nth-of-type(3):hover {
+  transform: scale(1.5);
+  transform-origin: right bottom;
+  /* transform-origin: (左中右)（上中下）; */
+}
+.origin div:nth-of-type(4):hover {
+  /* transform: skew(-45deg);
+  transform-origin: left bottom; */
+  /* transform: translate(50px, 50px);
+  translate: 50px 50px; */
+
+  transform: scale(1.5);
+  scale: 2;
+  /* 2*1.5,放大三倍 */
+
+  /* transform: rotate(45deg);
+  rotate: 45deg; */
+}
+.perspective div {
+  position: absolute;
+}
+.perspective div:nth-of-type(2) {
+  transform: translateX(150px) rotateY(60deg);
+}
+.perspective div:nth-of-type(3) {
+  transform: translateY(150px) perspective(200px) rotateY(60deg);
+}
+.perspective div:nth-of-type(4) {
+  transform: translate(150px, 150px) perspective(200px) translateZ(50px);
+  transform-style: preserve-3d;
+}
+/* 200/(200-50)=1.33 */
+.look {
+  margin: 100px auto 100px 100px;
+  perspective: 400px;
+}
+.cube {
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% -50px;
+}
+
+.cube div {
+  position: absolute;
+  opacity: 0.85;
+}
+.front {
+  background-color: salmon;
+}
+.top {
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+.bottom {
+  transform-origin: bottom;
+  transform: rotateX(90deg);
+}
+.left {
+  background-color: cadetblue;
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+.right {
+  background-color: darkorange;
+  transform-origin: right;
+  /* transform: rotateY(-90deg); */
+  transform: rotateY(90deg) translateX(100px);
+}
+.cube div.back {
+  background-color: rgb(126, 126, 249);
+  transform: translateZ(-100px) rotateY(180deg);
+}
+.cube:hover {
+  transform: rotateY(-80deg);
+}
+.duration:hover div {
+  transform: translateX(300px);
+}
+.duration div:nth-of-type(1) {
+  transition-duration: 0.5s;
+}
+.duration div:nth-of-type(2) {
+  transition-duration: 1s;
+}
+.duration div:nth-of-type(3) {
+  transition-duration: 2s;
+}
+.duration div:nth-of-type(4) {
+  transition-duration: 3s;
+}
+.property:hover div {
+  transform: translateX(300px);
+  background-color: gold;
+  font-size: 26px;
+}
+.property div {
+  transition-duration: 1.5s;
+}
+.property div:nth-of-type(1) {
+  transition-property: none;
+}
+.property div:nth-of-type(2) {
+  transition-property: transform;
+}
+.property div:nth-of-type(3) {
+  transition-property: background-color;
+}
+.property div:nth-of-type(4) {
+  /* 預設all */
+  transition-property: all;
+}

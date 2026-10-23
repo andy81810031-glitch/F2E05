@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+li {
+  display: inline ;
+}
+.portry-red {
+  color: red;
+}
+a {
+  text-decoration: underline double;
+  /* text-decoration: none;不要底線 */
+  color: red;
+}
+hr {
+  border-color: yellow;
+  border-style: solid;
+}
+.pink-mark {
+  background-color: blue;
+}

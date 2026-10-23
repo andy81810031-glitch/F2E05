@@ -1,0 +1,15 @@
+#ppp {
+  color: blue;
+}
+.word {
+  color: blueviolet;
+}
+p {
+  color: chartreuse;
+}
+p.word {
+  color: crimson;
+}
+span {
+  color: darkorange;
+}

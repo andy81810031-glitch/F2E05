@@ -1,0 +1,202 @@
+.grid-area {
+  display: grid;
+  width: 500px;
+  grid-template-columns: 10% 1fr 300px;
+  grid-template-rows: 20px 40px 60px ;
+}
+
+/* p {
+  border: 1px solid sandybrown;
+} */
+.grid-two {
+  display: grid;
+  width: 600px;
+  /* grid-template-columns: 1fr 2fr 200px; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px;
+}
+/* 600/6=100 */
+/* 600-200=400/3=133 */
+.grid-two div {
+  border: 1px solid saddlebrown;
+}
+.grid-three {
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) ;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-rows: repeat(3, 100px 50px);
+  gap: 5px;
+  /* grid-template-rows: 100px 50px 100px 50px 100px 50px; */
+}
+.grid-three div:nth-of-type(odd),
+.grid-four div:nth-of-type(odd),
+.grid-five div:nth-of-type(odd)
+
+{
+  background-color: coral;
+}
+.grid-three div:nth-of-type(even), 
+.grid-four div:nth-of-type(even), 
+.grid-five div:nth-of-type(even) 
+{
+  background-color: cornflowerblue;
+}
+.grid-four {
+  display: grid;
+  width: 300px;
+  grid-template-columns: max-content 1fr min-content;
+  /* minmax(100px, 400px) */
+  grid-template-columns: minmax(20px, 1fr) minmax(20px, 1fr) minmax(20px, 1fr);
+  /* grid-template-columns: repeat(3, minmax(20px, 1fr)); */
+  /* grid-template-columns: minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr); */
+  /* grid-template-rows: 1rem; */
+  border: 1px solid black;
+}
+/* .grid-five {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px 20px;
+  row-gap: 10px;
+  column-gap: 20px;
+} */
+.grid-five {
+  display: grid;
+  grid-template-rows: 100px 100px;
+  /* grid-template-columns: 100px 100px; */
+  /* grid-auto-flow: row;
+  grid-auto-rows: 300px; */
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+  gap: 10px;
+}
+.grid-six {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  border: 1px solid black;
+}
+.grid-six div:first-of-type {
+  /* grid-column-start: 2;
+  grid-column-end: 4; */
+  /* grid-column: 2 / 4; */
+  grid-column: 2 / span 2 ;
+  /* grid-row-start: 2;
+  grid-row-end: 3; */
+  /* grid-row: 2 / 4; */
+  grid-row: 2 / span 2;
+  /* grid-area: row-start/ column-start/ row-end/ column-end */
+  grid-area: 2 / 2 / 4 / 4;
+  background-color: blue;
+}
+.grid-six div:nth-of-type(2) {
+  /* grid-column-start: 3;
+  grid-column-end: 4; */
+  /* grid-column: 2 / 5; */
+  grid-column: 2 / span 3 ;
+  /* grid-row-start: 4;
+  grid-row-end: 5; */
+  grid-area: 4 / 2 / 5 / 5;
+  /* 以下三行是一樣的意思 */
+  grid-row: 4;
+  /* grid-row: 4 / 5;
+  grid-row: 4 / span 1; */
+  background-color: rgb(123, 255, 0);
+}
+.grid-seven {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 80px 1fr 60px;
+  min-height: 100vh;
+  grid-template-areas:
+  "fofooter fofooter fofooter"
+  "asaside . mamain" 
+  "heheader heheader heheader"; 
+}
+header {
+  grid-area: heheader;
+  background-color: cadetblue;
+}
+aside {
+  grid-area: asaside;
+  background-color:darkgreen;
+}
+main {
+  grid-area: mamain;
+  background-color: burlywood;
+}
+footer {
+  grid-area: fofooter;
+  background-color: coral;
+}
+.grid-eight {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-template-areas: 
+  "a b b"
+  "c d e"
+  "f f g";
+  gap: 10px;
+}
+.grid-eight div:nth-of-type(odd) {
+  background-color: darkgrey;
+}
+.grid-eight div:nth-of-type(even) {
+  background-color: rgb(250, 107, 107);
+}
+.one {
+  grid-area: a;
+}
+.two {
+  grid-area: b;
+}
+.three {
+  grid-area: c;
+}
+.four {
+  grid-area: d;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4px;
+}
+.four p {
+  background-color: rgb(255, 170, 0);
+}
+.five {
+  grid-area: e;
+}
+.six {
+  grid-area: f;
+}
+.seven {
+  grid-area: g;
+}
+.grid-nine {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+  width: 500px;
+  height: 400px;
+  background-color: deepskyblue;
+  /* justify-content: center;
+  align-content: center; */
+  place-content: center;
+  /* justify-items: center;
+  align-items: center; */
+  place-items: center;
+}
+.grid-nine div {
+  background-color: bisque;
+}
+.grid-nine div:first-of-type {
+  /* align-self: end;
+  justify-self: start; */
+  place-self: end start;
+}

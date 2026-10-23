@@ -1,0 +1,24 @@
+/* 第一個子元素而且要是li */
+li:first-child {
+  color: blue;
+}
+ul :first-child {
+  background-color: yellow;
+}
+li:last-child {
+  color: red;
+}
+
+ul li:nth-child(odd) {
+  font-size: 10px;
+}
+ul li:nth-child(even) {
+  font-size: 24px;
+}
+body :only-child {
+  border: 1px solid orange;
+}
+/* 唯一的子元素而且要是p */
+p:only-child {
+  border: 1px solid orange;
+}

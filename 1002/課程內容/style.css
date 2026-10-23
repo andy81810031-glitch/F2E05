@@ -1,0 +1,57 @@
+p:first-of-type {
+  color: red;
+}
+div:first-of-type {
+  /* background-color: yellow; */
+}
+p:last-of-type {
+  font-weight: 900;
+}
+/* section裡面任何標籤的最後一個 */
+section :last-of-type {
+  text-decoration: underline black;
+}
+article {
+  border: 1px solid black;
+}
+p:nth-of-type(odd) {
+  text-decoration: line-through red;
+}
+img:only-of-type {
+  border: 6px solid burlywood
+}
+p:nth-of-type(2n + 2) {
+  font-size: 30px;
+}
+/* 同一層只有一個em標籤 */
+em:only-of-type {
+  background-color: black;
+  color: white;
+}
+/* li:not(.abc) {
+  background-color: pink;
+}
+li:not(:first-child) {
+  color: red;
+} */
+ul {
+  border: 1px solid black;
+}
+.list-two .fruit:not(.guava) {
+  background-color: coral;
+}
+ul .fruit:not(.guava, .payaya) {
+  color: crimson;
+}
+ul li:nth-child(odd of .fruit) {
+  font-size: 30px;
+}
+/* A:has(B) 裡面有B的A */
+/* 裡面有span標籤的li */
+.drink li:has(span) {
+  color: red;
+}
+/* 三個單選題，已被作答的題目，整題顏色變淺灰色 */
+div:has(:checked) {
+  color: lightgray;
+}

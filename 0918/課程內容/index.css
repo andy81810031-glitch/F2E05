@@ -1,0 +1,30 @@
+/* .red-color {
+  color: blue;
+}
+
+span {
+  color: #e45858
+}
+
+div {
+  color: rgb(255, 100, 0);
+}
+
+.rgba-color {
+  color: rgba(255, 0, 0, 0.6);
+} */
+label {
+  display: block;
+}
+.submit-btn {
+  display: block;
+}
+.pointer {
+  cursor: pointer;
+}
+.loading {
+  cursor:progress;
+}
+textarea {
+  resize: none;
+}

@@ -1,0 +1,201 @@
+.grid-area {
+  display: grid;
+  width: 500px;
+  grid-template-columns: 10% 1fr 300px;
+  grid-template-rows: 20px 40px 60px;
+}
+/* 容器尺寸-非fr軌道-gap=剩餘空間 500-300-50=150 */
+p {
+  border: 1px solid sandybrown;
+}
+.grid-two {
+  display: grid;
+  width: 600px;
+  /* grid-template-columns: 1fr 2fr 200px; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-rows: 50px; 
+}
+.grid-two div {
+  border: 1px solid saddlebrown;
+}
+.grid-three {
+  width: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-rows: repeat(3, 100px 50px);
+  gap: 5px;
+  /* grid-template-rows: 100px 50px 100px 50px 100px 50px; */
+}
+.grid-three div:nth-of-type(odd),
+.grid-four div:nth-of-type(odd),
+.grid-five div:nth-of-type(odd) {
+  background-color: coral;
+}
+.grid-three div:nth-of-type(even),
+.grid-four div:nth-of-type(even),
+.grid-five div:nth-of-type(even) {
+  background-color: cornflowerblue;
+}
+.grid-four {
+  display: grid;
+  width: 300px;
+  /* grid-template-columns: max-content 1fr max-content ; */
+  grid-template-columns: max-content max-content min-content;
+  /* grid-template-columns: minmax(40px, 1fr) minmax(50px 100px) minmax(min-content, max-content); */
+  /* grid-template-columns: repeat(3,minmax(50px, 1fr)); */
+  grid-template-rows: 1rem;
+  border: 1px solid black;
+}
+/* .grid-five {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px 20px;
+  row-gap: 10px;
+  column-gap: 20px;
+} */
+.grid-five {
+  display: grid;
+  grid-template-rows: 100px 100px;
+  /* grid-template-columns: 100px 100px; */
+  /* grid-auto-flow: row;
+  grid-auto-rows: 300px; */
+
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+
+  gap: 10px;
+}
+.grid-six {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  border: 1px solid black;
+}
+.grid-six div:first-of-type {
+  /* grid-column-start: 2;
+  grid-column-end: 3; */
+  /* grid-column: 2 / 4; */
+  /* grid-column: 2 / span 3; */
+  /* grid-row-start: 2;
+  grid-row-end: 3 ; */
+  /* grid-row: 2 / 4; */
+  /* grid-row: 2 / span 2; */
+  grid-area: 2 / 2 / 4 / 5 ;
+  background-color: red;
+}
+.grid-six div:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  background-color: orange;
+}
+.grid-six div:nth-of-type(3) {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  background-color: yellow;
+}
+.grid-six div:nth-of-type(4) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5 ;
+  background-color: green;
+}
+.grid-seven {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 80px 1fr 60px;
+  min-height: 100vh;
+  grid-template-areas:
+    "fofooter fofooter fofooter"
+    "asaside . mamain"
+    "heheader heheader heheader"
+    ;
+}
+header {
+  grid-area: heheader;
+  background-color: cadetblue;
+}
+aside {
+  grid-area: asaside;
+  background-color: darkgreen;
+}
+main {
+  grid-area: mamain;
+  background-color: burlywood;
+}
+footer {
+  grid-area: fofooter;
+  background-color: darkmagenta;
+}
+.grid-eight {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-template-areas: 
+  "a b b"
+  "c d e"
+  "f f g";
+  gap: 10px;
+}
+.grid-eight div:nth-of-type(odd) {
+  background-color: red;
+}
+.grid-eight div:nth-of-type(even) {
+  background-color:blue;
+}
+.one {
+  grid-area: a;
+}
+.two {
+  grid-area: b;
+}
+.three {
+  grid-area: c;
+}
+.four {
+  grid-area: d;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+}
+.four p {
+  background-color: yellow;
+}
+.five {
+  grid-area: e;
+}
+.six {
+  grid-area: f;
+}
+.sven {
+  grid-area: g;
+}
+.grid-nine {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+  width: 500px;
+  height: 400px;
+  background-color: deepskyblue;
+  /* justify-content: center;
+  align-content: center; */
+  place-content: center;
+  /* justify-items: center;
+  align-items: center; */
+  place-items: center;
+}
+.grid-nine div {
+  background-color: bisque  ;
+}
+.grid-nine div:first-of-type {
+  /* align-self: end;
+  justify-self: start; */
+  place-self: stretch center;
+}
+

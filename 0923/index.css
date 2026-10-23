@@ -1,0 +1,13 @@
+img {
+  display: block;
+  background-color: gray;
+}
+figure {
+  border-width: 10px solid gray;
+  width:  px;
+}
+figcaption {
+  font-size: 30px;
+  text-align: center;
+
+}

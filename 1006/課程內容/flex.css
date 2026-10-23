@@ -1,0 +1,144 @@
+ul {
+  display: flex;
+  width: 300px;
+  height: 400px;
+  border: 2px solid black;
+  /* 水平置中 */
+  justify-content: center;
+}
+.fruit.one {
+  /* 垂直置中 */
+  /* align-items: center; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.fruit.two {
+  height: 300px;
+  width: 600px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* 項目間距 */
+  /* gap: 8px; */
+  column-gap: 10px;
+  row-gap: 4px;
+  /* 主軸改為直向 */
+  /* flex-direction: column; */
+  /* 交叉軸變成橫向 */
+  /* align-items: center; */
+}
+/* .fruit.two li {
+  margin: 0 8px;
+} */
+a {
+  text-decoration: none;
+  color: black;
+  line-height:2;
+  margin-left: 6px;
+}
+nav {
+  display: flex;
+}
+nav:nth-child(1) {
+  background-color: rgb(112, 148, 75);
+  justify-content: center;
+}
+nav:nth-child(2) {
+  background-color: rgb(107, 156, 224);
+  justify-content: space-evenly;
+}
+nav:nth-child(3) {
+  background-color: chocolate;
+  /* justify-content: space-around; */
+  height: 300px;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+nav:nth-child(4) {
+  background-color: rgb(237, 173, 77);
+  /* justify-content: space-between; */
+  height: 300px;
+  flex-direction: column-reverse;
+  justify-content: end;
+}
+nav:nth-child(5) {
+  background-color: rgb(225, 131, 242);
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+nav:nth-child(6) {
+  background-color: rgb(245, 157, 187);
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+.inline-flex {
+  display: inline-flex;
+  border:5px solid black;
+}
+.inline-block div {
+  display: inline-block;
+  background-color: chartreuse;
+}
+.inline-block {
+  border: 5px solid red;
+}
+.inline-flex div,
+.inline-block div {
+  width: 200px;
+  height: 200px;
+  background-color: chocolate;
+}
+span {
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
+.span-father {
+  display: flex;
+}
+ul {
+  display: flex;
+}
+li {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 30px;
+}
+.row {
+  /* 預設值 */
+  flex-direction: row;
+  /* 橫向右到左 */
+  /* flex-direction: row-reverse; */
+  width: 400px;
+  /* 預設值是不換行nowrap */
+  flex-wrap: wrap-reverse;
+}
+.column {
+  /* 直向上到下 */
+  flex-direction: column;
+  /* 直向下到上 */
+  /* flex-direction: column-reverse; */
+  height: 300px;
+  flex-wrap: wrap-reverse;
+}
+li:first-of-type {
+  background-color: burlywood;
+}
+li:nth-of-type(2) {
+  background-color: coral;
+}
+li:nth-of-type(3) {
+  background-color: cornflowerblue;
+}
+li:nth-of-type(4) {
+  background-color: darkgrey;
+}
+li:nth-of-type(5) {
+  background-color: goldenrod;
+}
+li:nth-of-type(6) {
+  background-color: rgb(218, 209, 32);
+}

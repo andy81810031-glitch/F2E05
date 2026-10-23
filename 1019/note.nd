@@ -1,0 +1,7 @@
+SDLC = Software Development Lift Cycle
+客戶    PM          SA         RD      QA     DevOps
+需求 -> 分析需求 -> 系統分析 -> 實作 -> 測試 -> 上線
+
+AI SDLC
+客戶    AI          AI         AI      AI     AI
+需求 -> 分析需求 -> 系統分析 -> 實作 -> 測試 -> 上線

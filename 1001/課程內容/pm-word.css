@@ -1,0 +1,109 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=LXGW+WenKai+TC&family=Noto+Sans+TC:wght@100..900&display=swap'); */
+body {
+  /* font-family:"LXGW WenKai TC", Courier, monospace; */
+}
+em {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+span {
+  font-weight: 100;
+}
+strong {
+  font-weight: bold;
+}
+/* 以下四個是通用字體 */
+/* .sans-serif {
+  font-family: sans-serif;
+}
+.serif {
+  font-family: serif;
+}
+.monospace {
+  font-family: monospace;
+}
+.cursive {
+  font-family: cursive;
+} */
+
+.sans-serif {
+  text-decoration: underline black;
+}
+.serif {
+  text-decoration: line-through red;
+}
+.cursive {
+  text-decoration: overline blue;
+}
+a {
+  /* 移除超連結底線 */
+  text-decoration: none;
+}
+.emphasis,
+.zh {
+  /* 可直接用的值：triangle, circle, double-circle, dot */
+  /* text-emphasis: triangle; */
+  word-spacing: 8px;
+}
+.custom {
+  /* 自定義 */
+  /* text-emphasis: "x"; */
+  letter-spacing: -1px;
+}
+.zh {
+  /* 每個單字或是中文字之間的距離 */
+  letter-spacing: 8px;
+}
+.first {
+  text-shadow: -4px -4px 4px gray;
+}
+.second {
+  text-shadow: 4px 4px 2px black;
+}
+h4 {
+  font-family: Impact;
+  font-size: 30px;
+  color: #ffcc00;
+  text-shadow: #ee8800 1px 1px,
+               #dd7700 2px 2px,
+               #cc6600 3px 3px,
+               #bb5500 4px 4px,
+               #aa4400 5px 5px,
+               #993300 6px 6px,
+               #882200 7px 7px,
+               #771100 8px 8px,
+               #660000 9px 9px;
+}
+.container {
+  width: 100px;
+  line-height: 1.5;
+  font-size: 14px;
+  /* 首行凸排 */
+  text-indent: -2em;
+}
+.container-two {
+  font-size: 14px;
+  /* 首行縮排 */
+  text-indent: 2em;
+}
+.container, .container-two {
+  padding-left: 30px;
+}
+svg {
+  vertical-align: middle;
+}
+table {
+  width: 200px;
+  height: 200px;
+}
+td {
+  border: 1px solid black;
+  /* 垂直置中 */
+  vertical-align: middle;
+  /* 水平置中 */
+  text-align: center;
+}

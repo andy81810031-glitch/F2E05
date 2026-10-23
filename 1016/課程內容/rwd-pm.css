@@ -1,0 +1,148 @@
+body {
+  padding: 16px;
+  background-color: beige;
+}
+.page {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "main"
+  "footer"
+  "ad";
+  gap: 8px;
+}
+header {
+  grid-area: header;
+  background-color: cadetblue;
+}
+nav {
+  grid-area: nav;
+  background-color: coral;
+}
+main {
+  grid-area: main;
+  background-color: rgb(194, 187, 47);
+  min-height: 160px;
+}
+footer {
+  grid-area: footer;
+  background-color: cornflowerblue;
+}
+aside {
+  grid-area: ad;
+  background-color: lightpink;
+}
+.page > * {
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+@media (min-width: 1024px) {
+  .page {
+    grid-template-columns: 180px 1fr 200px;
+    grid-template-rows: auto 300px auto;
+    grid-template-areas: 
+    "header header header"
+    "nav main ad"
+    "footer footer footer";
+  }
+}
+
+.product {
+  margin-top: 24px;
+  display: grid;
+  grid-template-areas: 
+  "title"
+  "img"
+  "price"
+  "btn"
+  "desc";
+  gap: 12px;
+  border-radius: 12px;
+  max-width: 900px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.product .title {
+  grid-area: title;
+  font-size: 20px;
+  font-weight: bold;
+}
+.product img {
+  grid-area: img;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  width: 100%;
+}
+.product .price {
+  grid-area: price;
+  color: crimson;
+  font-size: 22px;
+  font-weight: bold;
+}
+.product desc {
+  grid-area: desc;
+  color: darkgrey;
+  line-height: 1.6;
+}
+.product button {
+  grid-area: btn;
+  padding: 12px;
+  border: none;
+  background-color: #3d406b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+@media (min-width:1024px) {
+  .product {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "img title"
+    "img price"
+    "img desc"
+    "img btn";
+  }
+}
+h1 {
+  /* font-size: 30px; */
+  font-size: clamp(30px, 5vw, 50px);
+  /* n*0.05=30 n=600 */ 
+  /* n*0.05=50 n=1000 */
+}
+/* @media (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+} */
+.clamp-area {
+  width: clamp(320px, 90%, 1200px);
+  padding: clamp(16px, 4vw, 55px);
+  background-color: khaki;
+  /* width: calc(100% - 200px);
+  padding: calc(20px * 2);
+  margin: calc(500px / 4); */
+}
+.header {
+  height: 50px;
+  background-color: darkgray;
+}
+.main {
+  height: calc(100vh - 50px);
+  background-color: coral;
+  display: flex;
+}
+.aside {
+  width: 200px;
+}
+.section {
+  width: calc(100vw - 200px);
+  background-color: burlywood;
+}

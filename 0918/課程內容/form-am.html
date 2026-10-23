@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="../../reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <form action="">
+      <!-- 方法一：label包住input
+      <label>
+        姓名：
+        <input type="text" />
+      </label> -->
+      <!-- 方法二：label for等於input id
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" /> -->
+      <!-- 錯誤方法
+      <span>姓名：</span>
+      <input type="text" name="" id="" /> -->
+
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" />
+      <label for="password">密碼：</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        disabled
+        value="123"
+      />
+      <label for="email">信箱：</label>
+      <input type="email" name="email" id="email" value="abc@mail" multiple />
+      <label for="lucky-number">幸運號碼：</label>
+      <input
+        type="number"
+        name="lucky-number"
+        id="lucky-number"
+        min="3"
+        max="10"
+      />
+      <label for="tel">電話號碼：</label>
+      <input
+        type="tel"
+        name="tel"
+        id="tel"
+        placeholder="0912345678"
+        pattern="[0-9]{10}"
+      />
+
+      <label for="search">搜尋：</label>
+      <input type="search" name="search" id="search" maxlength="6" />
+
+      <label for="address">地址：</label>
+      <input type="text" id="address" name="address" />
+
+      <label for="hobby">興趣：</label>
+      <input type="text" id="hobby" name="hobby" />
+
+      <input type="hidden" name="token" value="123" />
+
+      <!-- 提交按鈕 -->
+      <input type="submit" value="我要提交囉" class="submit-btn" />
+      <input type="reset" value="全部清空" />
+      <input type="button" value="單純的按鈕" />
+    </form>
+  </body>
+</html>

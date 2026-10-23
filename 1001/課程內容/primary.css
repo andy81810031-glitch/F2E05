@@ -1,0 +1,36 @@
+#ppp {
+  /* (1,0,0) */
+  color: green;
+}
+.word {
+  color: red;
+}
+p {
+  color: blue;
+}
+p.word {
+  /* (0,1,1) */
+  color: aqua;
+}
+span {
+  color: red;
+}
+
+
+.btn {
+  background-color: black;
+  /* (0,1,0) */
+}
+body main section div ul li ol li p button {
+  background-color: red;
+  /* (0,0,10) */
+}
+
+#title {
+  color: blue !important;
+  background-color: blueviolet;
+  font-size: 40px;
+}
+h1 {
+  color: green !important;
+}

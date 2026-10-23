@@ -1,0 +1,99 @@
+.px {
+  font-size: 20px;
+}
+.pt {
+  font-size: 20pt;
+}
+.cm {
+  font-size: 1cm;
+}
+.in {
+  font-size:0.5in;
+}
+.father {
+  font-size: 50px;
+}
+.child {
+  font-size: 50%;
+  /* 50px * 50% = 25px */
+}
+.outside {
+  font-size: 1em;
+  /* 會吃到瀏覽器預設的16px */
+}
+.middle {
+  /* font-size: 20px; */
+  font-size: 0.8em;
+}
+.content {
+  font-size: 0.5em; 
+  /* 30px * 0.5 = 15px */
+}
+/* 16px */
+h1 {
+  font-size: 2.5rem;
+  /* 16*2.5=40 */
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1rem;
+}
+.vhvw {
+  font-size: 3vw;
+}
+.container {
+  width: 100vw;
+  height: 100dvh;
+  background-color: rgb(203, 198, 198);
+}
+section {
+  width: 500px;
+  height: 500px;
+}
+.div-px {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+.div-percent {
+  width: 50%;
+  height: 30%;
+  background-color: blue;
+}
+
+.div-rem {
+  /* 跟元素16px */
+  width: 10rem;
+  height: 12rem;
+  background-color: chocolate;
+}
+
+.img-container {
+  width: 300px;
+  height: 700px;
+  border: 1px solid black;
+}
+.img-visible {
+  width: 100%;
+}
+
+.img-hidden {
+  overflow: hidden ;
+  /* 預設
+  overflow: visible; */
+}
+.img-scroll {
+  overflow: scroll;
+}
+.img-auto {
+  overflow: auto;
+}
+.word {
+  width: 100%;
+  font-size: 100%;
+}

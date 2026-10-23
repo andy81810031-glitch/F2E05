@@ -1,0 +1,16 @@
+table {
+  border-collapse: collapse;
+  border: 3px solid darkred;
+}
+
+table td {
+  text-align: center;
+  border: 1px solid gray;
+}
+
+.line {
+  border-bottom: 3px solid darkred;
+}
+.straight-line {
+  border-right: 3px solid darkred;
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>隨筆手帳｜每日任務與日記總覽</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="1014-practice.css">
+  </head>
+  <body id="top">
+    <!-- ============ HEADER + NAV ============ -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#top" class="logo">
+          <span class="logo-mark"></span>
+          隨筆手帳
+        </a>
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <a href="#tasks">每日任務</a>
+            </li>
+            <li>
+              <a href="#diary">日記總覽</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============ 每日任務 ============ -->
+    <section id="tasks" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>每日任務</h2>
+        </div>
+        <form class="task-form">
+          <ul class="task-list">
+            <li class="task-item">
+              <input type="checkbox" id="t1" checked />
+              <label for="t1">完成 CSS Grid 練習</label>
+              <span class="tag tag-high">高優先</span>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="t2" />
+              <label for="t2">寫今天的日記</label>
+              <span class="tag tag-mid">中優先</span>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="t3" />
+              <label for="t3">整理課堂筆記</label>
+              <span class="tag tag-mid">中優先</span>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="t4" checked />
+              <label for="t4">澆花</label>
+              <span class="tag tag-low">低優先</span>
+            </li>
+          </ul>
+          <div class="add-task">
+            <input type="text" placeholder="新增一項任務..." />
+            <input type="date" value="2026-08-21" />
+            <button type="button">新增</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ 日記總覽 ============ -->
+    <section id="diary" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>日記總覽</h2>
+        </div>
+        <div class="card-list">
+          <article class="diary-card">
+            <img
+              class="thumb"
+              src="https://picsum.photos/seed/journal1/400/280"
+              alt="午後的咖啡館"
+            />
+            <div class="card-body">
+              <span class="date">2026.08.19</span>
+              <h3>午後的咖啡館</h3>
+              <p>今天窩在巷口的咖啡館，看完了一整本小說。</p>
+            </div>
+          </article>
+          <article class="diary-card">
+            <img
+              class="thumb"
+              src="https://picsum.photos/seed/journal2/400/280"
+              alt="淋雨的下班路"
+            />
+            <div class="card-body">
+              <span class="date">2026.08.17</span>
+              <h3>淋雨的下班路</h3>
+              <p>沒帶傘，索性慢慢走回家，路燈的倒影意外好看。</p>
+            </div>
+          </article>
+          <article class="diary-card">
+            <img
+              class="thumb"
+              src="https://picsum.photos/seed/journal3/400/280"
+              alt="第一次做出戚風蛋糕"
+            />
+            <div class="card-body">
+              <span class="date">2026.08.14</span>
+              <h3>第一次做出戚風蛋糕</h3>
+              <p>失敗了三次之後，終於烤出不塌陷的戚風。</p>
+            </div>
+          </article>
+          <article class="diary-card">
+            <img
+              class="thumb"
+              src="https://picsum.photos/seed/journal4/400/280"
+              alt="深夜的頂樓"
+            />
+            <div class="card-body">
+              <span class="date">2026.08.11</span>
+              <h3>深夜的頂樓</h3>
+              <p>和朋友爬上頂樓，聊到快兩點才捨得下樓。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 回到最上面按鈕 ============ -->
+    <a href="#top" class="back-to-top" aria-label="回到最上面">↑</a>
+  </body>
+</html>

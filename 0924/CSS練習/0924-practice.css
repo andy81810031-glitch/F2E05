@@ -1,0 +1,16 @@
+/* 答案沒有絕對，畫面樣式有對就可以 */
+
+.post.featured {
+  color: brown;
+}
+article .author {
+  font-size: 24px;
+}
+
+article .title, 
+aside .aside-title {
+  background-color: yellow ;
+}
+.date.featured {
+  color: blue
+}

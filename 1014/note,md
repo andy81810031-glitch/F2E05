@@ -1,0 +1,22 @@
+display: grid;
+
+grid-template-columns,grid-template-rows
+
+fr
+
+
+auto-fill,auto-fit
+row-gap,column-gap
+
+grid-template-rows
+
+
+grid-auto
+grid-auto-columns：設定自動產生的欄寬
+grid-auto-rows：設定自動產生的列高
+grid-auto-flow：控制元素自動排列的方向與方式
+
+grid-auto-flow:
+row：由左到右排列，排滿再換下一列（預設）
+column：由上到下排列，排滿再換下一欄
+dense：嘗試讓後面的元素填補前面留下的空格
