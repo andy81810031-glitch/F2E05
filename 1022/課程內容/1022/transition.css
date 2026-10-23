@@ -1,0 +1,149 @@
+section div {
+  width: 100px;
+  height: 100px;
+}
+section {
+  width: 400px;
+  height: 400px;
+  border: 5px solid palevioletred;
+  position: relative;
+}
+section div:nth-of-type(1) {
+  border: 1px solid black;
+}
+section div:nth-of-type(2) {
+  background-color:cornflowerblue ;
+}
+section div:nth-of-type(3) {
+  background-color:forestgreen;
+}
+section div:nth-of-type(4) {
+  background-color: goldenrod;
+}
+.property:hover div {
+  transform: translateX(300px);
+  background-color: orangered;
+  font-size: 26px;
+}
+.property div {
+  transition-duration: 2s;
+}
+.property div:nth-of-type(2){
+  transition-property: background-color;
+}
+.property div:nth-of-type(3) {
+  transition-property: transform;
+}
+.timing-1:hover div {
+  transform: translateX(300px);
+}
+.timing-2:hover div {
+  transform: translateX(300px);
+}
+.timing div {
+  transition-duration: 3s;
+}
+.timing-1 div:nth-of-type(1) {
+  transition-timing-function: linear;
+}
+.timing-1 div:nth-of-type(2) {
+  /* 預設值 */
+  transition-timing-function: ease;
+}
+.timing-1 div:nth-of-type(3) {
+  transition-timing-function: ease-in;
+}
+.timing-1 div:nth-of-type(4) {
+  transition-timing-function: ease-out;
+}
+.timing-2 div:nth-of-type(1) {
+  transition-timing-function: ease-in-out;
+}
+.timing-2 div:nth-of-type(2) {
+  transition-timing-function: step-start;
+}
+.timing-2 div:nth-of-type(3) {
+  transition-timing-function: step-end;
+}
+.timing-2 div:nth-of-type(4) {
+  transition-timing-function: steps(4);
+}
+/* 300/4=75
+0->75->150->225->300 */
+.timing-3:hover div {
+  transform: translateX(300px);
+}
+.timing-3 div {
+  transition-duration: 3s;
+}
+.timing-3 div:nth-of-type(1) {
+  transition-timing-function: steps(4, end);
+}
+.timing-3 div:nth-of-type(2) {
+  transition-timing-function: steps(4, start);
+}
+.timing-3 div:nth-of-type(3) {
+  /* 會跳n-1次 */
+  transition-timing-function: steps(4, jump-none);
+}
+.timing-3 div:nth-of-type(4) {
+  /* 會跳n＋1次 */
+  transition-timing-function: steps(4, jump-both);
+}
+.typing {
+  margin: 20px 0;
+  font-size: 28px;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: monospace;
+  border-right:2px solid black;
+  transition-duration: 3s;
+  transition-timing-function: steps(8);
+}
+.typing:hover {
+  width: 8em;
+}
+.delay:hover div {
+  transform: translateX(300px);
+}
+.delay div {
+  transition-duration: 2s;
+}
+.delay div:nth-of-type(2) {
+  transition-delay: 0.5s;
+}
+.delay div:nth-of-type(3) {
+  transition-delay: 2s;
+}
+.delay div:nth-of-type(4) {
+  transition-delay: 3s;
+}
+.behavior div {
+  position: absolute;
+}
+.behavior div:nth-of-type(2) {
+  top: 100px;
+  transition-duration: 3s;
+}
+.behavior div:nth-of-type(3) {
+  top: 200px;
+  transition-duration: 3s;
+  transition-behavior: allow-discrete;
+  /* transition-property: display; */
+}
+.behavior:hover div {
+  /* 無法參與過渡 */
+  display: none;
+  opacity: 0;
+}
+.behavior div:nth-of-type(4) {
+  top: 300px;
+  transition-duration: 3s;
+  transition-behavior: allow-discrete;
+}
+@starting-style {
+  .behavior div:nth-of-type(4) {
+    opacity: 0;
+  }
+}
