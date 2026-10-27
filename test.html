@@ -4,17 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafe Menu</title>
-    <link href="test.css" rel="stylesheet" />
+    <!-- <link href="test.css" rel="stylesheet" /> -->
+
+    <script type="module" src="./test.js"></script>
   </head>
   <body>
-    <div class="menu">
-      <main>
-        <h1>CAMPER CAFE</h1>
-        <p>Est. 2020</p>
-        <section>
-          <h2>Coffee</h2>
-        </section>
-      </main>
+    <div x-data="{ hasToken: false }">
+      <button x-show="!hasToken">登入</button>
+      <button x-show="hasToken">登出</button>
+    </div>
+
+
+    <div x-data="auth">
+      <button @click="gotoLogin()">登入</button>
+      <button @click="gotoSignUp()">註冊</button>
+
+      <h1 x-show="page === 'login'">登入畫面</h1>
+      <h1 x-show="page === 'signup'">註冊畫面</h1>
     </div>
   </body>
 </html>
